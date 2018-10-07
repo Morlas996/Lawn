@@ -1,0 +1,8 @@
+SET SENDGRID_SECRET_KEY='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'
+
+
+SET RDS_Hostname="restaurantdb.cmwqjtzbok0d.us-east-1.rds.amazonaws.com"
+SET RDS_User="Steven"
+SET RDS_Port="3306"
+SET RDS_Password="rie2kahh"
+SET RDS_Database="restaurantproj"

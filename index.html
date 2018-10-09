@@ -35,20 +35,21 @@
 <body>
 	
 	<nav  id="navbar" class="navbar navbar-light" style="color: black; width: 100%">
-    <a class="logo" ng-href="/"> <img src="logo.png" id="logo" class="d-inline-block align-top" alt=""></a>
-        <div class="col-xs-6 col-md-5 col-lg-12 col-xl-12 show-for-medium" id:"regNav" style="width: 100%">
-          <div id="standardNav" class="col-xs-3 col-md-5 col-lg-8 col-xl-12">
-       
     
-    <a  class="navlink" ng-href="/about"  ><span>About Us</span></a>    
+        <div class="col-xs-6 col-md-5 col-lg-12 col-xl-12" id:"regNav" style="width: 100%">
+          <div id="standardNav" class="col-xs-3 col-md-5 col-lg-8 col-xl-12">
+       <a class="logo" ng-href="/"> <img src="logo.png" id="logo" class="d-inline-block align-top float-left" alt=""></a>
+    
+    <a  class="navlink" ng-href="/about"  ><span>About Us</span></a>  
             <a  class="navlink" ng-href="/services" ><span>Services</span></a>
          <a  class="navlink" ng-href="/photos" ><span>Photos</span></a> 
            <a  class="navlink" ng-href="/contact" ><span>Contact Us</span></a> 
         
          </div>      
-                <div id="dropdownmenu" class="dropdown show-for-small-only">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-     <span class="glyphicon glyphicon-align-center" aria-hidden="true"></span>
+   <div id="dropdownmenu" class="dropdown">
+     <a class="logo float-left" ng-href="/"> <img src="logo.png" id="logo" alt=""></a>
+  <button class="btn btn-secondary dropdown-toggle float-right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <span class="glyphicon glyphicon-align-center"></span>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
    <a  class="navlink" ng-href="/about"  ><span>About Us</span></a>    

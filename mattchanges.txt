@@ -1,0 +1,5 @@
+nav bar white
+
+no home
+
+carousel smaller and above the footer

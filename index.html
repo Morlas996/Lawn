@@ -39,23 +39,27 @@
         <div class="col-xs-6 col-md-5 col-lg-12 col-xl-12" id:"regNav" style="width: 100%">
           <div id="standardNav" class="col-xs-3 col-md-5 col-lg-8 col-xl-12">
        <a class="logo" ng-href="/"> <img src="logo.png" id="logo" class="d-inline-block align-top float-left" alt=""></a>
+    <div class="navlink">
+    <a  class="navlink" ng-href="/about" ><span>About Us</span></a>  
+            <a  class="navlink" ng-href="/services" ><span>Services</span></a>
+         <a  class="navlink" ng-href="/photos" ><span>Photos</span></a> 
+           <a  class="navlink" ng-href="/contact" ><span>Contact Us</span></a> 
+        </div>
+         </div>   
+            
+   <div id="dropdownmenu" class="dropdown float-left" style="width: 100px; height: 100px;">
+     <!--<a class="logo float-left" ng-href="/"> <img src="logo.png" id="logo" style="width: 50%" class="float-left"></a>-->
     
-    <a  class="navlink" ng-href="/about"  ><span>About Us</span></a>  
-            <a  class="navlink" ng-href="/services" ><span>Services</span></a>
-         <a  class="navlink" ng-href="/photos" ><span>Photos</span></a> 
-           <a  class="navlink" ng-href="/contact" ><span>Contact Us</span></a> 
-        
-         </div>      
-   <div id="dropdownmenu" class="dropdown">
-     <a class="logo float-left" ng-href="/"> <img src="logo.png" id="logo" alt=""></a>
-  <button class="btn btn-secondary dropdown-toggle float-right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-     <span class="glyphicon glyphicon-align-center"></span>
-  </button>
+  <button type="button" class="btn btn-light btn-sm float-left" id="dropdownMenuButton" data-toggle="dropdown"  aria-expanded="false">
+    <img src="logo.png" id="logo" style="width: 100%;" class="float-left">
+</button>
+  
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-   <a  class="navlink" ng-href="/about"  ><span>About Us</span></a>    
-            <a  class="navlink" ng-href="/services" ><span>Services</span></a>
-         <a  class="navlink" ng-href="/photos" ><span>Photos</span></a> 
-           <a  class="navlink" ng-href="/contact" ><span>Contact Us</span></a> 
+    <a ng-href="/"><span>Home</span></a> </br>  
+   <a ng-href="/about"><span>About Us</span></a> </br>   
+            <a ng-href="/services"><span>Services</span></a></br>
+         <a ng-href="/photos"><span>Photos</span></a></br> 
+           <a ng-href="/contact"><span>Contact Us</span></a> 
   </div>
 </div>
 				</div>
@@ -73,7 +77,7 @@
 			
     <div ng-view></div>
     <div class="main-container">
-    <footer class="section footer-classic navbar navbar-fixed-bottom context-dark bg-image" style="background: white;">
+    <footer class="section footer-classic navbar navbar-fixed-bottom context-dark bg-image" style="background: darkgrey;">
         <div class="container">
           <div class="row row-30">
             <div class="col-md-4 col-xl-5">

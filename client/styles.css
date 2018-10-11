@@ -4,9 +4,16 @@
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('grass.jpeg');
     height: 100%;
 }
-.container{
-
+.button{
+    width: 100px;
 }
+ .btn-primary:not(:disabled):not(.disabled).active, 
+    .btn-primary:not(:disabled):not(.disabled):active, 
+    .show>.btn-primary.dropdown-toggle{
+        color: white;
+        background-color: white;
+        border-color: white;
+    }
 .col-container {
     display: table; /* Make the container element behave like a table */
     width: 75%;
@@ -61,6 +68,7 @@ opacity: 0.5;
 nav{
     background-color: white;
     text-align: center;
+    position: relative;
 }
 .jobs{
     position: relative;
@@ -79,7 +87,7 @@ nav{
 #imageQuote{
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('family.jpg');
     position: relative;
-    left: 15%;
+    left: 25%;
     color: white;
     text-align: center;
 }
@@ -121,12 +129,15 @@ height: 25%;
 bottom: 10%;
 }
 #logo{
-    width: 5em;
-    height: 5em;
+    width: 7%;
+    
     position: relative;
     
     top: 5%;
 
+}
+ul{
+    list-style: none;
 }
 a{
     color: black;
@@ -143,7 +154,7 @@ body{
     background-color: white;
 }
 #about{
-    background-color: lightgreen;
+    background-color: white;
     
     
     width: 100%;
@@ -161,10 +172,20 @@ a:before, a:after, a > span:before, a > span:after {
   position: absolute;
   transition: transform .5s ease;
 }
+.linkbox{
+    position: relative;
+    padding-top: 55px;
+    right: 5%;
+}
 .navlink {
-  padding: 10px;
+  padding: 50px;
   display: inline-block;
+  padding-bottom: 0px;
+   padding-top: 30px;
+    right: 12%;
+  
   overflow: hidden;
+  z-index: 1000;
 }
 .navlink:before, navlink:after {
   left: 0;

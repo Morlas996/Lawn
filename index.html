@@ -10,7 +10,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css" />
-	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 	
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
@@ -34,40 +34,54 @@
 </head>
 <body>
 	
-	<nav  id="navbar" class="navbar navbar-light" style="color: black; width: 100%">
+	<nav  id="navBig" class="navbar navbar-light" style="color: black; width: 100%; padding-bottom: 0;">
+    <div  id:"regNav">
+    <!--<div class="container-fluid float-left" style="width: 100%"> <a class="logo" ng-href="/"> <img src="logo.png" id="logo" class="d-inline-block align-top" alt=""></a>-->
     
-        <div class="col-xs-6 col-md-5 col-lg-12 col-xl-12" id:"regNav" style="width: 100%">
-          <div id="standardNav" class="col-xs-3 col-md-5 col-lg-8 col-xl-12">
-       <a class="logo" ng-href="/"> <img src="logo.png" id="logo" class="d-inline-block align-top float-left" alt=""></a>
-    <div class="navlink">
-    <a  class="navlink" ng-href="/about" ><span>About Us</span></a>  
-            <a  class="navlink" ng-href="/services" ><span>Services</span></a>
+        
+         
+     <div id="standardNav">
+       <a class="logo" ng-href="/"> <img src="logo.png" id="logo" class="d-inline-block align-top" alt=""></a>
+      <div class="navlink">
+       <a  class="navlink" ng-href="/about" ><span>About Us</span></a>  
+           <a  class="navlink" ng-href="/services" ><span>Services</span></a>
          <a  class="navlink" ng-href="/photos" ><span>Photos</span></a> 
            <a  class="navlink" ng-href="/contact" ><span>Contact Us</span></a> 
         </div>
-         </div>   
-            
-   <div id="dropdownmenu" class="dropdown float-left" style="width: 100px; height: 100px;">
-     <!--<a class="logo float-left" ng-href="/"> <img src="logo.png" id="logo" style="width: 50%" class="float-left"></a>-->
-    
-  <button type="button" class="btn btn-light btn-sm float-left" id="dropdownMenuButton" data-toggle="dropdown"  aria-expanded="false">
-    <img src="logo.png" id="logo" style="width: 100%;" class="float-left">
-</button>
-  
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a ng-href="/"><span>Home</span></a> </br>  
-   <a ng-href="/about"><span>About Us</span></a> </br>   
-            <a ng-href="/services"><span>Services</span></a></br>
-         <a ng-href="/photos"><span>Photos</span></a></br> 
-           <a ng-href="/contact"><span>Contact Us</span></a> 
+        </div>
+        <div class="collapse navbar-collapse" id="dmenu">
+    <ul class="navbar-nav">
+      
+      <a class="logo" ng-href="/"> <img src="logo.png" id="logoSmall" class="d-inline-block align-left" alt=""></a>
+     
+     
+      <li class="nav-item" id="dropdown">
+        <a class="nav-link align-right" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-bars gi-2x" ></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a ng-href="/about" ><span>About Us</span></a>  
+           <a ng-href="/services" ><span>Services</span></a>
+         <a ng-href="/photos" ><span>Photos</span></a> 
+           <a ng-href="/contact" ><span>Contact Us</span></a> 
+        </div>
+      </li>
+    </ul>
   </div>
+         </div>   
+        </div>    
+  </div>
+</nav>
+   
 </div>
 				</div>
 			    
   
-				
     
 </nav>
+
+</nav>
+<hr style="border: .15in solid grey; padding: 0;" />   
                 <!--<a  class="nav-item nav-link" ng-href="/">Home</a>
 				<a  class="nav-item nav-link" ng-href="/menu">Menu</a>
 				<a  class="nav-item nav-link" ng-href="/about">About Us</a>

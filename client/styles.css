@@ -1,8 +1,9 @@
 .intro{
     color: black;
     font-weight: bold;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('grass.jpeg');
+    background:  url('grass.jpeg');
     height: 100%;
+    padding-top: 0;
 }
 .button{
     width: 100px;
@@ -24,9 +25,66 @@
 #dropdownmenu{
     display: none;
 }
-@media (max-width: 960px) {
+#smallTable{
+    display: none;
+}
+#imageQuoteSmall{
+    display: none;
+     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('family.jpg');
+    position: relative;
+    left: 10%;
+    background-color: white;
+    background-repeat: no-repeat;
+    color: white;
+    width: 500px;
+    text-align: center;
+    height: 300px;
+}
+#dropdown{
+    
+    top:0;
+            position:fixed;
+            right:0;
+}
+.fa-bars{
+    font-size: 50px;
+}
+#standardNav{
+    position: relative;
+    width: 100%;
+    height: 140px;
+    left: 350px;
+}
+#speilSmall{
+    display: none;
+      font-size: 1.2em;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('lawnchair.jpg');
+    background-repeat: no-repeat;
+}
+#dmenu{
+    display: none;
+    
+
+
+}
+@media (max-width: 800px) {
+   
+    #smallTable{
+        display: inline-block;
+    }
+    #dmenu{display: inline-block;}
+    #bigTable{display: none;}
   #standardNav     { display: none; }
   #dropdownmenu { display: inline-block; }
+  #speil{display: none;}
+  #imageQuote{
+    display: none;
+  }
+  #speilSmall{display: inline-block;}
+  #imageQuoteSmall{display: inline-block;}
+#homeBig{display: none;}
+
+  
 }
 .col {
     display: table-cell; 
@@ -57,7 +115,7 @@ position: relative;
 .intro::after{
     content:"";
 
-opacity: 0.5;
+opacity: 1.0;
   top: 0;
   left: 0;
   bottom: 0;
@@ -129,12 +187,21 @@ height: 25%;
 bottom: 10%;
 }
 #logo{
-    width: 7%;
+    width: 150px;
+    height: 150px;
     
-    position: relative;
-    
-    top: 5%;
+}
 
+#logoSmall{
+   width: 100px;
+   height: 100px;
+    
+}
+
+@media (max-width: 800px){
+    #logo{
+        top: 0px;
+    }
 }
 ul{
     list-style: none;
@@ -160,6 +227,16 @@ body{
     width: 100%;
     height: 100%
 }
+@media screen and (max-width: 600px) {
+  #bigTable {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
 
 div > a, a > span {
   position: relative;
@@ -174,24 +251,25 @@ a:before, a:after, a > span:before, a > span:after {
 }
 .linkbox{
     position: relative;
-    padding-top: 55px;
+    
     right: 5%;
 }
 .navlink {
-  padding: 50px;
+  padding: 25px;
   display: inline-block;
-  padding-bottom: 0px;
-   padding-top: 30px;
-    right: 12%;
   
   overflow: hidden;
   z-index: 1000;
+}
+.navlink:hover{
+    color: #367C2B;
+
 }
 .navlink:before, navlink:after {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #0883a4;
+  background: #367C2B;
 }
 .navlink:before {
   bottom: 0;

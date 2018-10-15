@@ -9,7 +9,7 @@ function makeRequest(from, subject, content) {
 		body: {
 			personalizations: [{
 				to: [{
-					email: "stevenmorris996@gmail.com", from
+					email: "stevenmorris996@gmail.com"
 				}, ],
 				subject: subject,
 			}, ],

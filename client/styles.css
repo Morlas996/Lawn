@@ -168,6 +168,9 @@ ul{
     position: relative;
     left: 450px;
 }
+#emailform{
+    text-align: center;
+}
 #aboutText{
     position: relative;
     left: 115px;

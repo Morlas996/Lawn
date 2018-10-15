@@ -116,11 +116,16 @@ footer a:hover{
 
 
 }
+#aboutSmall{
+    display: none;
+}
 @media (max-width: 800px) {
    
     #smallTable{
         display: inline-block;
     }
+    #about{display: none;}
+    #aboutSmall{display: inline-block;}
     #dmenu{display: inline-block;}
     #bigTable{display: none;}
   #standardNav     { display: none; }
@@ -144,16 +149,66 @@ footer a:hover{
 ul{
     list-style: none;
 }
-.card{
-    background-image: url('about.jpg')
+#cardBig{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('about.jpg');
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 401px;
+    left: 250px;
+    margin-bottom: 75px;
+  padding: 10px;
+    border: 1px solid black;
+    box-shadow:  -1px 1px black,
+         -2px 2px black,
+         -3px 3px black,
+         -4px 4px black,
+         -5px 5px black;
 }
-.card-block{
+#bigAbout{
+    position: relative;
+    left: 450px;
+}
+#aboutText{
+    position: relative;
+    left: 115px;
+}
+#cardSmall{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('about.jpg');
+    background-repeat: no-repeat;
+    
+    width: 350px;
+    height: 250px;
+    
+    margin-bottom: 25px;
+  padding: 10px;
+    border: 1px solid black;
+    box-shadow:  -1px 1px black,
+         -2px 2px black,
+         -3px 3px black,
+         -4px 4px black,
+         -5px 5px black;
+}
+#blockBig{
     color: white;
-    background-color: black;
-    width: 50%;
-    height: 50%;
+    
+    width: 600px;
+    height: 401px;
     align-self: center;
-    font-size: 22px;
+    font-size: 20px;
+    
+
+position: relative;
+    
+
+    margin: auto;
+}
+#blockSmall{
+    color: white;
+    
+    width:300px;
+    height: 200px;
+    align-self: center;
+    font-size: 15px;
     
 
 position: relative;

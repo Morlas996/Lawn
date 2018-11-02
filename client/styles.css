@@ -9,6 +9,47 @@ nav{
    
     
 }
+/*side navigation*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position:absolute;
+            right:0;
+    z-index: 1;
+    top: 0;
+    
+    background-color: lightgrey;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*side navigation*/
 .intro{
     color: black;
     font-weight: bold;
@@ -32,6 +73,7 @@ padding-bottom: 0;
     text-align: center;
     position: absolute;
     width: 1900px;
+
     top: 0;
     overflow: hidden;
 }
@@ -146,10 +188,10 @@ footer a:hover{
 }
 #dropdown{
     
-    top:100px;
-            position:absolute;
+    top: 0px;
+            position: absolute;
             right:0;
-            
+            height: 100%;
             z-index: 10000;
 }
 .fa-bars{
@@ -275,6 +317,38 @@ letter-spacing: 8px;
 }
 nav{
     overflow: hidden;
+}
+}
+@media(max-width: 1536px){
+.care{
+width: 1518px;
+overflow: hidden;
+}
+#serve{
+width: 1518px;
+overflow: hidden;
+}
+.linkbox{
+width: 1518px;
+overflow: hidden;
+right: 200px;
+
+}
+#speilBottom{
+    text-align: center;
+}
+#navBig{
+width: 1518px;
+overflow: hidden;
+}
+.intro{
+    width: 1518px;
+    overflow: hidden;
+
+}
+nav{
+    width: 1518px;
+    overflow-x: hidden;
 }
 }
 @media(max-width: 1200px){
@@ -657,7 +731,7 @@ a:before, a:after, a > span:before, a > span:after {
 }
 .dropdown-menu{
     position: relative;
-    background-color: lightgrey;
+    
     text-align: center;
     z-index: 100000000000;
 }
@@ -851,7 +925,8 @@ input[type=submit] {
     cursor: pointer;
 }
 #navbarDropdownMenuLink{
-    position: static;
+    position: relative;
+    top: 100px;
     text-align: right;
 }
 

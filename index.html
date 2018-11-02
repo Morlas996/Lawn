@@ -29,7 +29,7 @@
 <link rel="stylesheet" type="text/css" href="/styles.css" />
 	<script src="/scripts/controllers.js"></script>
 	<script src="/scripts/factories.js"></script>
-	
+	<script src="/scripts/scripts.js"></script>
 	<script src="/scripts/services.js"></script>
 	<script src="/scripts/app.js"></script>
     <script src="/scripts/modal.js"></script>
@@ -55,24 +55,35 @@
         </div>
         </div>
         <div class="collapse navbar-collapse" id="dmenu">
-    <ul class="navbar-nav">
+    
       
       <a class="logo" ng-href="/"> <img src="logo.png" id="logoSmall" class="d-inline-block align-left" alt=""></a>
-     
-     
-      <li class="nav-item" id="dropdown">
-        <a class="nav-link align-right" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-bars gi-x" ></i>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <div class="square"></div>
-          <a class="dLink" ng-href="/about" ><span>About Us</span></a>  </br>
+  <!--<div>   
+     <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="dLink" ng-href="/about" ><span>About Us</span></a>  </br>
            <a class="dLink" ng-href="/services" ><span>Services</span></a></br>
          <a class="dLink" ng-href="/photos" ><span>Photos</span></a> </br>
            <a class="dLink" ng-href="/contact" ><span>Contact Us</span></a> 
+       </div>    
+       <span style="font-size:30px;cursor:pointer" id="navbarmenu" onclick="openNav()">&#9776; open</span>
+</div>
+-->
+
+
+      <div class="nav-item" id="dropdown">
+        <a class="closebtn" onclick="openNav()" href="javascript:void(0)" id="navbarDropdownMenuLink" >
+          <i class="fas fa-bars gi-x" ></i>
+        </a>
+        <div class="sidenav" id="mySidenav" aria-labelledby="navbarDropdownMenuLink">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a class="dLink" onclick="closeNav()" ng-href="/about" ><span>About Us</span></a>  </br>
+           <a class="dLink" onclick="closeNav()" ng-href="/services" ><span>Services</span></a></br>
+         <a class="dLink" onclick="closeNav()" ng-href="/photos" ><span>Photos</span></a> </br>
+           <a class="dLink" onclick="closeNav()" ng-href="/contact" ><span>Contact Us</span></a> 
         </div>
-      </li>
-    </ul>
+      </div>
+    
   </div>
          </div>   
         </div>    

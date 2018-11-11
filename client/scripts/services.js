@@ -1,4 +1,4 @@
-var app = angular.module("lawncaresite.services", []);
+var app = angular.module("AshleySite.services", []);
 
 app.service('UserService', ['$http', '$location', function($http, $location) {
     
@@ -52,3 +52,12 @@ app.service('UserService', ['$http', '$location', function($http, $location) {
         }
     }
 }])
+
+app.service('SEOService', ['$rootScope', function ($rootScope) {
+    this.setSEO = function (data) {
+        $rootScope.seo = {};
+        for (var p in data) {
+            $rootScope.seo[p] = data[p];
+        }
+    }
+}]);

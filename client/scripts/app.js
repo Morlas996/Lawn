@@ -1,5 +1,5 @@
-var app  = angular.module('lawncaresite', ['ngRoute', 'ngResource', 'lawncaresite.services', 
-'lawncaresite.factories', 'lawncaresite.controller']);
+var app  = angular.module('AshleySite', ['ngRoute', 'ngResource', 'AshleySite.services', 
+'AshleySite.factories', 'AshleySite.controller', 'AshleySite.directives']);
 //controls transition between views
 app.config(['$routeProvider', '$locationProvider',  function($routeProvider, $locationProvider ){
     $locationProvider.html5Mode(true);
@@ -10,24 +10,30 @@ app.config(['$routeProvider', '$locationProvider',  function($routeProvider, $lo
         
 
     })
+    .when("/art", {
+        templateUrl: "/views/art.html",
+        controller: "ArtController"
+
+    })
     .when("/contact", {
         templateUrl: "/views/contact.html",
         controller: "contactController"
         
     })
-    .when("/about", {
-        templateUrl: "/views/about.html"
+    .when("/checkout", {
+        templateUrl: "/views/about.html",
+        controller: "CheckoutController"
         
     })
-    .when("/services", {
-        templateUrl: "/views/services.html"
-        
+    .when("/art/:id", {
+        templateUrl: "/views/art/:id.html",
+        controller: "ArtDetailController"
         
     })
 
     
-    .when("/photos", {
-        templateUrl: "/views/photos.html"
-        
+    .when("/cart", {
+        templateUrl: "/views/cart.html",
+        controller: "CheckoutController"
     })
 }])

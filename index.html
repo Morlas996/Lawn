@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="lawncaresite">
+<html lang="en" ng-app="AshleySite">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,79 +31,39 @@
 	<script src="/scripts/factories.js"></script>
 	<script src="/scripts/scripts.js"></script>
 	<script src="/scripts/services.js"></script>
+  <script src="/scripts/directives.js"></script>
 	<script src="/scripts/app.js"></script>
     <script src="/scripts/modal.js"></script>
-    <title>For All your Lawncare Needs</title>
+    
     <base href="/">
+    <title>Check Out My Art</title>
 </head>
 <body>
 	
-	<nav  id="navBig" class="navbar navbar-light" style="color: black; padding-bottom: 0;">
-    <div  id:"regNav">
-    <!--<div class="container-fluid float-left" style="width: 100%"> <a class="logo" ng-href="/"> <img src="logo.png" id="logo" class="d-inline-block align-top" alt=""></a>-->
-    
-        
-         
-     <div id="standardNav">
-       <div class="linkbox">
-       <a class="logo" ng-href="/"> <img src="logo.png" id="logo" class="d-inline-block align-top" alt=""></a>
-      
-       <a  class="navlink" ng-href="/about" ><span>About Us</span></a>  
-           <a  class="navlink" ng-href="/services" ><span>Services</span></a>
-         <a  class="navlink" ng-href="/photos" ><span>Photos</span></a> 
-           <a  class="navlink" ng-href="/contact" ><span>Contact Us</span></a> 
-        </div>
-        </div>
-        <div class="collapse navbar-collapse" id="dmenu">
-    
-      
-      <a class="logo" ng-href="/"> <img src="logo.png" id="logoSmall" class="d-inline-block align-left" alt=""></a>
-  <!--<div>   
-     <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a class="dLink" ng-href="/about" ><span>About Us</span></a>  </br>
-           <a class="dLink" ng-href="/services" ><span>Services</span></a></br>
-         <a class="dLink" ng-href="/photos" ><span>Photos</span></a> </br>
-           <a class="dLink" ng-href="/contact" ><span>Contact Us</span></a> 
-       </div>    
-       <span style="font-size:30px;cursor:pointer" id="navbarmenu" onclick="openNav()">&#9776; open</span>
-</div>
--->
-
-
-      <div class="nav-item" id="dropdown">
-        <a class="closebtn" onclick="openNav()" href="javascript:void(0)" id="navbarDropdownMenuLink" >
-          <i class="fas fa-bars gi-x" ></i>
-        </a>
-        <div class="sidenav" id="mySidenav" aria-labelledby="navbarDropdownMenuLink">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a class="dLink" onclick="closeNav()" ng-href="/about" ><span>About Us</span></a>  </br>
-           <a class="dLink" onclick="closeNav()" ng-href="/services" ><span>Services</span></a></br>
-         <a class="dLink" onclick="closeNav()" ng-href="/photos" ><span>Photos</span></a> </br>
-           <a class="dLink" onclick="closeNav()" ng-href="/contact" ><span>Contact Us</span></a> 
-        </div>
-      </div>
-    
+<header id="header" class="clear">
+  <div id="logoContainer">
+    <a ng-href="/"><img id="logo" src="logo.png"></a>
   </div>
-         </div>   
-        </div>    
+  <div id="mainNav">
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <a ng-href="/home">Home</a>
+        </li>
+        <li>
+          <a ng-href="/art">Art</a>
+        </li>
+        <li>
+          <a ng-href="/cart">Checkout</a>
+        </li>
+        <li>
+          <a ng-href="/contact">Contact Us</a>
+        </li>
+      </ul>
+      <div class="pagedivider"></div>
+    </nav>
   </div>
-</nav>
-   
-</div>
-				</div>
-			    
-  
-    
-</nav>
-
-</nav>
- 
-                <!--<a  class="nav-item nav-link" ng-href="/">Home</a>
-				<a  class="nav-item nav-link" ng-href="/menu">Menu</a>
-				<a  class="nav-item nav-link" ng-href="/about">About Us</a>
-                <a  class="nav-item nav-link" ng-href="/contact">Contact Us</a>
-				<a ng-href="/login">Employees</a>-->
+  </header>
 				
 			
     <div ng-view></div>

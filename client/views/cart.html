@@ -1,0 +1,161 @@
+
+<div class='container' id="checkout-pg">
+    <div class='row'>
+        <div class='col-sm-8' id="form-side">
+<!-- ENTER EMAIL -->
+            <h3 id="form-head"><span class="badge">1</span> Your Email</h3>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label"></label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="emailcheck" placeholder="Email" ng-model="email">
+                    </div>
+                </div>
+            </form>
+
+<!-- ENTER NAME + BILLING INFO -->
+            <h3 id="form-head"><span class="badge">2</span> Your Billing Address</h3>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="name" placeholder="First Name">
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" placeholder="Last Name">
+                    </div>
+                </div>
+            </form>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="company" class="col-sm-2 control-label"></label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="company" placeholder="Company Name">
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="phone" placeholder="Phone">
+                    </div>
+                </div>
+            </form>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="address1" class="col-sm-2 control-label">Address</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="address1" placeholder="Address 1">
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="add2" placeholder="Address 2 (optional)">
+                    </div>
+                </div>
+            </form>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="city" class="col-sm-2 control-label"></label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="city" placeholder="City">
+                    </div>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="state" placeholder="State" max-length="2" min-length="2">
+                    </div>
+                </div>
+            </form>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="zip" class="col-sm-2 control-label"></label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" id="zip" placeholder="Zip Code" max-length="5" min-length="5">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="country" placeholder="Country">
+                    </div>
+                </div>
+            </form>
+
+<!-- ENTER PAYMENT METHOD -->
+            <h3 id="form-head"><span class="badge">3</span>Payment Method</h3>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"></label>
+                    <div class="col-sm-10" id="pay-top">
+                        <label><input type="radio" name="optionsRadios" id="credit" value="option1" checked>  Credit Card </label>
+                        <img id="cards" src="images/visa.png">
+                        <img id="cards" src="images/mastercard.png">
+                        <img id="cards" src="images/american-express.png">
+                        <img id="cards" src="images/discover.png">
+                    </div>
+                    <label class="col-sm-2 control-label"></label>
+                    <div class="col-sm-10" id="pay-bottom">
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" id="cardnum" placeholder="Card #" ng-model="cardNumber">
+                        </div>
+                    </div>
+                    <label class="col-sm-2 control-label"></label>
+                    <div class="col-sm-10" id="pay-bottom">
+                        <label class="col-sm-2 control-label">Expiration: </label>
+                        <div class="col-sm-8 form-inline">
+                            <input type="number" class="form-control" id="cardinfo" ng-model="expMonth" maxlength="2" minlength="2" placeholder="MONTH">
+                            <input type="number" class="form-control" id="cardinfo" ng-model="expYear" maxlength="2" minlength="2" placeholder="YEAR">
+                            <input type="number" class="form-control" id="cardinfo" ng-model="cvc" maxlength="3" minlength="3" placeholder="CVC">
+                        </div>
+                    </div>
+                </div>
+            </form>
+             <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"></label>
+                    <div class="col-sm-10">
+                        <label><input type="radio" name="optionsRadios" id="credit" value="option1" > <img id="cards" src="images/paypal.png"> Pay with PayPal </label>
+                    </div>
+                </div>
+             </form>
+    <!-- PROCESS PAYMENT BUTTON -->
+             <div id="bottom-check">
+        <h4><strong>Almost done! Click the submit button to process your payment.</strong></h4>
+        <button type="submit" id="button-check" class="btn btn-default" ng-click="processPayment()">Submit Your Order</button>
+
+            </div>            
+        </div>
+
+        <!-- SHOPPING CART ITEMS + INFO ON RIGHT -->
+        <div class='col-sm-4' id="cart-side">
+            <div class="text-center">
+                <h3 id="checkout-head">Your Shopping Cart</h3>
+                <button type="button" id="button-cancel"><a href="/#!/apparel"><span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span> Cancel + Continue Shopping</a></button>
+            </div>
+            <!-- LIST OF CART ITEMS HERE -->
+            <ul class="media-list" ng-repeat="purchase in purchases">
+                <li class="media">
+                    <div class="media-left media-middle">
+                        <a href="#">
+                            <img class="media-object" src="{{purchase.imageurl}}" alt="test">
+                        </a>
+                    </div>
+                    <div class="media-body media-middle">
+                        <h5 class="media-heading" id="checkout-title">{{purchase.title}}</h5>
+                        <h5 class="media-heading" id="checkout-price">{{purchase.price | currency}}</h5>
+                        <br>
+                        <button type="button" id="button-remove" class="btn btn-default" ng-click="removeItem()">Remove</button>
+                    </div>
+                </li>
+            </ul>
+            <br>
+            <!-- ORDER TOTAL + DISABLED DISCOUNT CODE INPUT -->
+            <div class="text-center">
+                <h3 id="checkout-head">Order Summary</h3>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Discount Code" disabled>
+                <span class="input-group-btn">
+        <button class="btn btn-default" type="button" disabled>Apply</button>
+      </span>
+                <br>
+            </div>
+            <br>
+            <h4 class="media-heading" id="checkout-title">Order Total:</h4>
+            <h4 class="media-heading" id="checkout-price">$55</h4>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 {
-  "name": "lawncaresite",
+  "name": "Ashley's Art",
   "version": "1.0.0",
-  "description": "lawn care website",
+  "description": "Art Store Website",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Morlas996/LawnCare.git"
+    "url": "git+https://github.com/Morlas996/AshleyArt.git"
   },
   "keywords": [
     "lawn"
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Morlas996/LawnCare/issues"
   },
-  "homepage": "https://github.com/Morlas996/LawnCare#readme",
+  "homepage": "https://github.com/Morlas996/AshleyArt.git",
   "dependencies": {
     "@sendgrid/mail": "^6.3.1",
     "angular": "^1.7.4",
